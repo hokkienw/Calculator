@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Debit</class>
+ <widget class="QMainWindow" name="Debit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="Tax">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>300</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>250</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: #ffffff;
+    font: bold 14pt &quot;Arial&quot;;
+    color: rgb(126, 126, 123);
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Размер ставки</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Calculate">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>160</y>
+      <width>561</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(108, 210, 96);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}
+QPushButton:pressed {
+	background-color: rgb(242, 242, 242);
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Рассчитать</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Процентная ставка</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>200</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: #ffffff;
+    font: bold 14pt &quot;Arial&quot;;
+    color: rgb(126, 126, 123);
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Сумма</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="MonthPay">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>200</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Rate">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>250</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>300</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: #ffffff;
+    font: bold 14pt &quot;Arial&quot;;
+    color: rgb(126, 126, 123);
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Налог</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Сумма депозита</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Ключевая ставка</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>120</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Период /месяц</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>0</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Выплаты</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>80</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Сумма внесения</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>40</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Пополнение</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>120</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Капитализация</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="BoxPayout">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>0</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Ежемесячно</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>В конце</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="BoxReplenish">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>40</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Нет</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ежемесячно</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="BoxCapitalization">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>120</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Нет</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ежемесячно</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="DebitSumm">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>0</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Percent">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>40</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="KeyRate">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>80</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Month_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>120</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_replenish">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>80</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	background-color: rgb(126, 126, 123);
+    font: bold 14pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Back">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>350</y>
+      <width>561</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(242, 158, 51);
+    font: bold 18pt &quot;Arial&quot;;
+    color: #ffffff;
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: rgb(242, 242, 242);
+	border: 1px solid rgb(82, 83, 79);
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string> Назад / Back</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
